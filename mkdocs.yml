@@ -7,10 +7,15 @@ nav:
       - Forecasting: forecast_example.md  
       - Backcasting: backcast_example.md        
   - Code Examples:
-      - Python: code_example_python.md
-        
-  
+      - Python: 
+          - Visualise Forecast: forecast_visualise.ipynb
+  - Notebook page: notebook.ipynb
 
+  
 theme:
   name: material
+
+plugins:
+  - mkdocs-jupyter
+
 
