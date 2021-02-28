@@ -5,16 +5,25 @@
 Making forecasts is a key functionality - the API provides a forward view of how many units to deliver/make ready
 at a certain datetime, to maximise our revenue or profits
 
+
+## Pre-Requisites
+
+* Sign up for a free account on WasteNot
+* Subscribe to one of the paid plans - free 30-day trials are available
+* Located the account's API key in the "Subscription" navigation tab
+
+## Running a Forecast
+
 To make a forecast, attach the inputs to a POST query and send a request to the API URL.
 
-	https://backend.sys.bluedotthinking.com/
+	https://api.bluedotthinking.com/
 
 The request has a number of required parameters - some are required, and some are optional.
 
 At a minimum, the request requires historical data (dates, units demand), and the price and cost per unit
 
 
-## Required Inputs
+### Required Inputs
 
 * `timestamp` - an array of timestamps  in ISO-8601 format, indicating the start of the period.  This is historical data, used to generate the forecast.
 * `demand` - an array of integers, matched to the number of timestamps.  This is historical data, used to generate the forecast.
@@ -24,18 +33,7 @@ At a minimum, the request requires historical data (dates, units demand), and th
 * `opt_param` - the optimisation parameter - this can be either `profit` or `revenue`
 
 
-
-## Optional Inputs
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-
-
-
-## Basic Forecast
+### Constructing a Request
 
 First, a basic example to get us started - we will use the minimum required inputs, optimising for profit:
 
@@ -47,7 +45,7 @@ Here, we're using a number of default parameters that:
 * For a product that has a shelf-life of 2 days, costs $1, and can be sold for $5
 * Optimising for maximum profit - defined as revenue minus cost
 
-###Example Request
+####Example Request
 
 	{
 		"timestamp": ["2017-05-24T00:00:00", "2017-05-25T00:00:00", "2017-05-26T00:00:00", "2017-05-27T00:00:00", "2017-05-28T00:00:00", "2017-05-29T00:00:00", "2017-05-30T00:00:00", "2017-05-31T00:00:00", "2017-06-01T00:00:00", "2017-06-02T00:00:00", "2017-06-03T00:00:00", "2017-06-04T00:00:00", "2017-06-05T00:00:00", "2017-06-06T00:00:00", "2017-06-07T00:00:00", "2017-06-08T00:00:00", "2017-06-09T00:00:00", "2017-06-10T00:00:00", "2017-06-11T00:00:00", "2017-06-12T00:00:00", "2017-06-13T00:00:00", "2017-06-14T00:00:00", "2017-06-15T00:00:00", "2017-06-16T00:00:00", "2017-06-17T00:00:00", "2017-06-18T00:00:00", "2017-06-19T00:00:00", "2017-06-20T00:00:00", "2017-06-21T00:00:00", "2017-06-22T00:00:00"], 
@@ -59,7 +57,7 @@ Here, we're using a number of default parameters that:
 		"forecast_periods_ahead":7
 	}
 
-### Example Response
+#### Example Response
 
 	{
 		"status": "success",
@@ -129,7 +127,8 @@ For those who want to delve further, the forecast for each periods is also provi
 
 * `forecast_timestamp` - This is the timestamp associated with the beginning of the forecast period - for a daily forecast, this is 12am of each day!
 * `predicted_demand_units` - The "central estimate" of the forecast demand for this period - this number is NOT optimised to maximise your revenue or profit.
-* `optimised_demand_units` - The "optimal estimate" of the forecast demand for this period - this number IS NOT optimised to maximise your revenue or profit, depending on the option you picked in the request.
+* `optimised_demand_units` - The "optimal estimate" of the forecast demand for this period - this number IS optimised to maximise your revenue or profit, depending on the option you picked in the request.
 
---  
+#### Visualizing Results
 
+The [Forecasting Example](https://nbviewer.jupyter.org/github/alvin-chan/bdt_django_front_end_postgres_mkdocs/blob/master/forecast_example_1.ipynb?flush_cache=true) jupyter notebook provides a worked example for displaying this data using python

@@ -2,15 +2,11 @@ site_name: WasteNot Documentation
 
 nav:
   - Getting Started: index.md
-#  - Install: install.md
   - API Features:
-      - Forecasting: forecast_example.md  
-      - Backcasting: backcast_example.md        
+      - Forecasting: forecasting.md  
+      - Backcasting: backcasting.md        
   - Code Examples:
-      - Python: 
-          - Visualise Forecast: forecast_visualise.ipynb
-  - Notebook page: notebook.ipynb
-
+      - Python: code_examples_python.md
   
 theme:
   name: material

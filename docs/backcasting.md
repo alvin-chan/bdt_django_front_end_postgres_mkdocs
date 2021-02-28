@@ -1,7 +1,5 @@
 # Backcasts Example
 
-<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org). -->
-
 Backcasting involves simulating what would have happened, had optimised forecasts been running.  It assumes the deliveries took place as the system recommended and calculates:
 
 * The amount of `revenue` that would have been generated
@@ -12,13 +10,25 @@ It allows users to see for themselves how much they could have saved, compared t
 
 Importantly, this allows users to accurately estimate the Return on Investment (RoI) of implementing this service in minutes.
 
+## Pre-Requisites
+
+* Sign up for a free account on WasteNot
+* Located the account's API key in the "Subscription" navigation tab
+
+
+## Running a Backcast
+
 To generate a backcast, attach the inputs to the POST query and send a request to the API URL.
 
-	https://backend.sys.bluedotthinking.com/
+	https://api.bluedotthinking.com/
 
 The request has a number of required parameters - some are required, and some are optional.
 
-## Required Inputs
+### Authorization
+
+* `access_token` - string representing your API key, found in "subscription" tab within the WasteNot navigation after sign-in.  Must be set in headers to authorize runs against your account. 
+
+### Required Inputs
 
 * `timestamp` - an array of timestamps  in ISO-8601 format, indicating the start of the period.  This is historical data, used to generate the forecast.
 * `demand` - an array of integers, matched to the number of timestamps.  This is historical data, used to generate the forecast.
@@ -32,7 +42,7 @@ The request has a number of required parameters - some are required, and some ar
 * `n_forecasts_simulated` - the number of forecasts to be simulated - e.g. setting this to equal **4** allows us to see what would have happened if we had carried out forecasts over 4 consecutive weeks
 
 
-## Optional Inputs
+### Optional Inputs
 
 * `historical_waste_fraction_of_delivered` - the fraction of delivered units that had been wasted, over the simulation period.  Defaults to industry-average of 20%.
 * `public_holiday_country` - a string representing the country from which the public holidays.
@@ -40,7 +50,7 @@ The request has a number of required parameters - some are required, and some ar
 * `event_name` - Define the names of the custom events to be included in the backcast.  Naming events consistently allow them to be re-used.
 	
 
-## Basic Backcast
+### Constructing a Request
 
 First, a basic example to get us started - we will use the minimum required inputs, optimising for profit:
 
@@ -197,4 +207,6 @@ For those who want to delve further, the precise time series for the simulation 
 * `simulation_unmet_units_timeseries` - time series of the number of demanded units that were unmet at each time period, had the service been in place
 * `simulation_wasted_units_timeseries` - time series of the number of units wasted at each time period, had the service been in place
 
-We'll see in a separate example how to visualise this data (coming soon!)
+#### Visualizing Results
+
+The [Backcasting Example](https://nbviewer.jupyter.org/github/alvin-chan/bdt_django_front_end_postgres_mkdocs/blob/master/backcast_example_1.ipynb?flush_cache=true) jupyter notebook provides a worked example for displaying this data using python
