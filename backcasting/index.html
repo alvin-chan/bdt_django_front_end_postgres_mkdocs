@@ -94,36 +94,6 @@
       
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-      </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
   </nav>
 </header>
@@ -195,7 +165,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../forecast_example/" class="md-nav__link">
+    <a href="../forecasting/" class="md-nav__link">
       Forecasting
     </a>
   </li>
@@ -238,26 +208,47 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-Requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-backcast" class="md-nav__link">
+    Running a Backcast
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a Backcast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    Authorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#required-inputs" class="md-nav__link">
     Required Inputs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#optional-inputs" class="md-nav__link">
     Optional Inputs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-backcast" class="md-nav__link">
-    Basic Backcast
+        
+          <li class="md-nav__item">
+  <a href="#constructing-a-request" class="md-nav__link">
+    Constructing a Request
   </a>
   
-    <nav class="md-nav" aria-label="Basic Backcast">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#example-request" class="md-nav__link">
@@ -298,6 +289,13 @@
           <li class="md-nav__item">
   <a href="#time-series-deep-dive" class="md-nav__link">
     Time Series Deep Dive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizing-results" class="md-nav__link">
+    Visualizing Results
   </a>
   
 </li>
@@ -350,7 +348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../code_example_python/" class="md-nav__link">
+    <a href="../code_examples_python/" class="md-nav__link">
       Python
     </a>
   </li>
@@ -385,26 +383,47 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-Requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-backcast" class="md-nav__link">
+    Running a Backcast
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a Backcast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    Authorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#required-inputs" class="md-nav__link">
     Required Inputs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#optional-inputs" class="md-nav__link">
     Optional Inputs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-backcast" class="md-nav__link">
-    Basic Backcast
+        
+          <li class="md-nav__item">
+  <a href="#constructing-a-request" class="md-nav__link">
+    Constructing a Request
   </a>
   
-    <nav class="md-nav" aria-label="Basic Backcast">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#example-request" class="md-nav__link">
@@ -449,6 +468,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#visualizing-results" class="md-nav__link">
+    Visualizing Results
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -473,8 +499,6 @@
                 
                 
                 <h1 id="backcasts-example">Backcasts Example</h1>
-<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org). -->
-
 <p>Backcasting involves simulating what would have happened, had optimised forecasts been running.  It assumes the deliveries took place as the system recommended and calculates:</p>
 <ul>
 <li>The amount of <code>revenue</code> that would have been generated</li>
@@ -483,11 +507,21 @@
 </ul>
 <p>It allows users to see for themselves how much they could have saved, compared to the historical levels of wastage, which the user can dictate.</p>
 <p>Importantly, this allows users to accurately estimate the Return on Investment (RoI) of implementing this service in minutes.</p>
+<h2 id="pre-requisites">Pre-Requisites</h2>
+<ul>
+<li>Sign up for a free account on WasteNot</li>
+<li>Located the account's API key in the "Subscription" navigation tab</li>
+</ul>
+<h2 id="running-a-backcast">Running a Backcast</h2>
 <p>To generate a backcast, attach the inputs to the POST query and send a request to the API URL.</p>
-<pre><code>https://backend.sys.bluedotthinking.com/
+<pre><code>https://api.bluedotthinking.com/
 </code></pre>
 <p>The request has a number of required parameters - some are required, and some are optional.</p>
-<h2 id="required-inputs">Required Inputs</h2>
+<h3 id="authorization">Authorization</h3>
+<ul>
+<li><code>access_token</code> - string representing your API key, found in "subscription" tab within the WasteNot navigation after sign-in.  Must be set in headers to authorize runs against your account. </li>
+</ul>
+<h3 id="required-inputs">Required Inputs</h3>
 <ul>
 <li><code>timestamp</code> - an array of timestamps  in ISO-8601 format, indicating the start of the period.  This is historical data, used to generate the forecast.</li>
 <li><code>demand</code> - an array of integers, matched to the number of timestamps.  This is historical data, used to generate the forecast.</li>
@@ -500,14 +534,14 @@
 <li><code>n_training_periods</code> - the number of periods from the beginning of the dataset to use for training - the simulation will take place immediately following the training period.  E.g. setting this to be <strong>100</strong> will use the first 100 days of the historical data to train the algorithm.</li>
 <li><code>n_forecasts_simulated</code> - the number of forecasts to be simulated - e.g. setting this to equal <strong>4</strong> allows us to see what would have happened if we had carried out forecasts over 4 consecutive weeks</li>
 </ul>
-<h2 id="optional-inputs">Optional Inputs</h2>
+<h3 id="optional-inputs">Optional Inputs</h3>
 <ul>
 <li><code>historical_waste_fraction_of_delivered</code> - the fraction of delivered units that had been wasted, over the simulation period.  Defaults to industry-average of 20%.</li>
 <li><code>public_holiday_country</code> - a string representing the country from which the public holidays.</li>
 <li><code>event_datetime</code> - Define the (starting) datetimes of the custom events to be included in the backcast.</li>
 <li><code>event_name</code> - Define the names of the custom events to be included in the backcast.  Naming events consistently allow them to be re-used.</li>
 </ul>
-<h2 id="basic-backcast">Basic Backcast</h2>
+<h3 id="constructing-a-request">Constructing a Request</h3>
 <p>First, a basic example to get us started - we will use the minimum required inputs, optimising for profit:</p>
 <p>Here, we're using a number parameters that include:</p>
 <ul>
@@ -650,7 +684,8 @@
 <li><code>simulation_unmet_units_timeseries</code> - time series of the number of demanded units that were unmet at each time period, had the service been in place</li>
 <li><code>simulation_wasted_units_timeseries</code> - time series of the number of units wasted at each time period, had the service been in place</li>
 </ul>
-<p>We'll see in a separate example how to visualise this data (coming soon!)</p>
+<h4 id="visualizing-results">Visualizing Results</h4>
+<p>The <a href="https://nbviewer.jupyter.org/github/alvin-chan/bdt_django_front_end_postgres_mkdocs/blob/master/backcast_example_1.ipynb?flush_cache=true">Backcasting Example</a> jupyter notebook provides a worked example for displaying this data using python</p>
                 
               
               
@@ -669,7 +704,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../forecast_example/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../forecasting/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -684,7 +719,7 @@
           </a>
         
         
-          <a href="../code_example_python/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../code_examples_python/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
