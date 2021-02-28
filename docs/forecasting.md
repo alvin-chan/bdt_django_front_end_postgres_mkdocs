@@ -1,4 +1,4 @@
-# Forecasts
+# Forecasting
 
 <!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org). -->
 
@@ -16,7 +16,7 @@ at a certain datetime, to maximise our revenue or profits
 
 To make a forecast, attach the inputs to a POST query and send a request to the API URL.
 
-	https://api.bluedotthinking.com/
+	https://api.bluedotthinking.com/forecast
 
 The request has a number of required parameters - some are required, and some are optional.
 
@@ -131,4 +131,4 @@ For those who want to delve further, the forecast for each periods is also provi
 
 #### Visualizing Results
 
-The [Forecasting Example](https://nbviewer.jupyter.org/github/alvin-chan/bdt_django_front_end_postgres_mkdocs/blob/master/forecast_example_1.ipynb?flush_cache=true) jupyter notebook provides a worked example for displaying this data using python
+The [Forecasting Example](https://nbviewer.jupyter.org/github/alvin-chan/bdt_django_front_end_postgres_mkdocs/blob/master/code_examples/forecast_example_1.ipynb?flush_cache=true) jupyter notebook provides a worked example for displaying this data using python

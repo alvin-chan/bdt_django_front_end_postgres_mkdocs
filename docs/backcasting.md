@@ -1,4 +1,4 @@
-# Backcasts Example
+# Backcasting
 
 Backcasting involves simulating what would have happened, had optimised forecasts been running.  It assumes the deliveries took place as the system recommended and calculates:
 
@@ -20,7 +20,7 @@ Importantly, this allows users to accurately estimate the Return on Investment (
 
 To generate a backcast, attach the inputs to the POST query and send a request to the API URL.
 
-	https://api.bluedotthinking.com/
+	https://api.bluedotthinking.com/backcast
 
 The request has a number of required parameters - some are required, and some are optional.
 
@@ -209,4 +209,4 @@ For those who want to delve further, the precise time series for the simulation 
 
 #### Visualizing Results
 
-The [Backcasting Example](https://nbviewer.jupyter.org/github/alvin-chan/bdt_django_front_end_postgres_mkdocs/blob/master/backcast_example_1.ipynb?flush_cache=true) jupyter notebook provides a worked example for displaying this data using python
+The [Backcasting Example](https://nbviewer.jupyter.org/github/alvin-chan/bdt_django_front_end_postgres_mkdocs/blob/master/code_examples/backcast_example_1.ipynb?flush_cache=true) jupyter notebook provides a worked example for displaying this data using python
